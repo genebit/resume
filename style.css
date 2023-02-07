@@ -1,179 +1,285 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
 
 :root {
-    --text-clr: #212224;
-    --palette-2: rgb(155, 248, 255);
-    --primary: rgb(46, 46, 46);
-    --secondary: rgb(233, 233, 233);
-    --white: white;
-    --accent: #ff4e4e;
+	--text-clr: #212224;
+	--primary: rgb(46, 46, 46);
+	--secondary: #90c979;
+	--white: white;
+	--accent: #57ff7b;
+	--animation-time: 200ms;
+	--onload-animation-time: 750ms;
 }
 
 ::-webkit-scrollbar {
-    width: 14px;
+	width: 14px;
 }
-  
+
 ::-webkit-scrollbar-thumb {
-    border: 3px solid transparent;
-    background-clip: padding-box;
-    border-radius: 9999px;
-    background-color: var(--primary);
+	border: 3px solid transparent;
+	background-clip: padding-box;
+	border-radius: 9999px;
+	background-color: var(--primary);
+}
+
+::selection {
+	background: rgba(0, 0, 100, 0.15);
 }
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #ffff;
+	padding: 0;
+	margin: 0;
+	background-color: var(--white);
+}
+
+main {
+	animation: var(--onload-animation-time) fadeIn ease-in-out;
 }
 
 * {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.65;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-clr);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span {
+	color: var(--text-clr);
 }
 
-p, a, li, td {
-    font-size: 0.95rem;
+p,
+a,
+li,
+td,
+span {
+	font-size: 0.95rem;
+}
+
+th,
+td {
+	text-align: left;
 }
 
 .container {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem 3rem;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem 3rem;
 }
 
 section {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 header {
-    padding: 4rem 0rem;
+	padding: 4rem 0rem;
 }
 
 .btn {
-    border: none;
-    padding: 0.5rem 2rem;
-    color: var(--text-clr);
-    cursor: pointer;
-}
-
-.btn:hover {
-    font-weight: bold;
+	border: none;
+	padding: 0.5rem 2rem;
+	color: var(--text-clr);
+	cursor: pointer;
 }
 
 .btn-white {
-    background-color: var(--white);
-    padding: 0.85rem 1rem;
-    transition: all 200ms ease-in-out;
+	background-color: var(--white);
+	padding: 0.85rem 1rem;
+	transition: all var(--animation-time) ease-in-out;
 }
 
 .btn-white:hover {
-    background-color: rgb(222, 222, 222);
+	background-color: rgb(222, 222, 222);
+}
+
+.btn-accent {
+	background-color: var(--accent);
+	padding: 0.85rem 1rem;
+	transition: all var(--animation-time) ease-in-out;
+}
+
+.btn-accent:hover {
+	background-color: #97faac;
 }
 
 .btn-primary {
-    background-color: var(--primary);
-    color: white;
-    transition: all 200ms ease-in-out;
+	background-color: var(--primary);
+	color: white;
+	transition: all var(--animation-time) ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: rgb(70, 70, 70);
+	background-color: rgb(70, 70, 70);
 }
 
 .btn-primary-outline {
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    transition: all 200ms ease-in-out;
+	border: 1px solid var(--primary);
+	background-color: transparent;
+	color: var(--primary);
+	transition: all var(--animation-time) ease-in-out;
 }
 
 .btn-primary-outline:hover {
-    background-color: var(--primary);
-    color: white;
+	background-color: var(--primary);
+	color: var(--white);
 }
 
 .text-white {
-    color: white;
+	color: var(--white);
+}
+
+.text-secondary {
+	color: var(--secondary);
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .cta {
-    padding: 0.85rem 4rem;
+	padding: 0.85rem 4rem;
 }
 
-td, th {
-    padding: 0.15rem;
+td,
+th {
+	padding: 0.15rem;
 }
 
 .footer {
-    padding: 5rem 2rem;
-    text-align: center;
-    background-color: rgb(44, 44, 44);
+	padding: 5rem 2rem;
+	text-align: center;
+	background-color: rgb(44, 44, 44);
 }
 
 /* UTILITIES */
 .p-0 {
-    padding: 0;
+	padding: 0;
 }
 
 .p-0 {
-    margin: 0;
+	margin: 0;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.w-75 {
+	width: 75%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-25 {
+	width: 25%;
+}
+
+.form-center {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .bg-primary {
-    background-color: var(--primary);
+	background-color: var(--primary);
+}
+
+.bg-white {
+	background-color: var(--white);
 }
 
 .text-muted {
-    color: #f2f2f2;
+	color: #f2f2f2;
 }
 
 .text-accent {
-    color: var(--accent);
+	color: var(--accent);
 }
 
 .img-avatar {
-    border-radius: 50%;
-    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 30%);
-    border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 3px 5px 0 rgb(0 0 0 / 30%);
+	border: 2px solid var(--white);
 }
 
 .ml-auto {
-    margin-left: auto;
+	margin-left: auto;
+}
+
+.list-style-none {
+	list-style-type: none;
 }
 
 /* LAYOUT */
-.row {  
-    display: flex;
+.row {
+	display: flex;
+	gap: 1rem;
+}
+
+.col {
+	width: 100%;
+}
+
+.col-auto {
+	width: auto;
 }
 
 /* CONTACT PAGE */
-
 .card {
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-    padding: 2rem;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+	padding: 2rem;
 }
 
-input, textarea {
-    padding: 0.5rem 1rem;
-    border-radius: 0;
-    border: 1px solid var(--primary);
+input,
+textarea {
+	padding: 0.5rem 1rem;
+	border-radius: 0;
+	border: 1px solid rgba(0, 0, 0, 0.25);
 }
-input:focus, textarea:focus {
-    outline: none !important;
+
+input:focus,
+textarea:focus {
+	outline: none;
 }
 
 .form {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+.form-footer {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.5rem;
+}
+.form-footer i {
+	color: var(--text-clr);
+	font-size: large;
+	transition: all 150ms ease-in-out;
+}
+
+.form-footer i:hover {
+	transform: scale(1.25);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
