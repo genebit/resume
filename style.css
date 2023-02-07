@@ -71,15 +71,11 @@ a {
 	text-decoration: none;
 }
 
-td,
-th {
-	padding: 0.15rem;
-}
-
 /* TABLE */
 th,
 td {
 	text-align: left;
+	padding: 0.5rem 1rem;
 }
 
 section {
@@ -261,12 +257,12 @@ textarea:focus {
 	color: var(--secondary);
 }
 
-.ml-auto {
-	margin-left: auto;
+.bg-muted {
+	background-color: rgb(228, 228, 228);
 }
 
-.list-style-none {
-	list-style-type: none;
+.ml-auto {
+	margin-left: auto;
 }
 
 /* LAYOUT */
