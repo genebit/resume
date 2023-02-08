@@ -4,7 +4,7 @@
 /* variables used */
 :root {
 	--text-clr: #212224;
-	--primary: rgb(46, 46, 46);
+	--primary: rgb(23, 23, 24);
 	--secondary: rgb(144, 201, 121);
 	--white: white;
 	--accent: rgb(87, 255, 123);
@@ -163,6 +163,10 @@ textarea:focus {
 	border: 2px solid var(--white);
 }
 
+.cta-text {
+	font-size: 2rem;
+}
+
 .cta {
 	padding: 0.85rem 4rem;
 }
@@ -196,7 +200,7 @@ textarea:focus {
 }
 
 .footer {
-	padding: 5rem 2rem;
+	padding: 8rem 2rem;
 	text-align: center;
 	background-color: rgb(44, 44, 44);
 }
@@ -224,6 +228,14 @@ textarea:focus {
 
 .w-25 {
 	width: 25%;
+}
+
+.fw-normal {
+	font-weight: normal;
+}
+
+.fw-bold {
+	font-weight: bold;
 }
 
 .form-center {
