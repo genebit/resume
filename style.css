@@ -202,16 +202,11 @@ textarea:focus {
 .footer {
 	padding: 8rem 2rem;
 	text-align: center;
-	background-color: rgb(44, 44, 44);
 }
 
 /* UTILITIES */
 .p-0 {
 	padding: 0;
-}
-
-.p-0 {
-	margin: 0;
 }
 
 .w-100 {
